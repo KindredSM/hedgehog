@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.vue";
 
 <template>
   <navbar />
+  <!-- router transition on router view-->
   <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
       <component :is="Component" :key="$route.fullPath" />

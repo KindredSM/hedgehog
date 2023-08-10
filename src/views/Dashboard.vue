@@ -2,6 +2,7 @@
   <div>
     <div class="dashboard-container">
       <h1 class="blue">Users</h1>
+      <!-- transition on deletion of list item -->
       <transition-group name="fade" tag="ul">
         <li v-for="user in users" :key="user.email" class="user">
           {{ user.firstName }}
@@ -21,10 +22,12 @@ import * as api from "../scripts/api";
 
 const users = ref<any[]>([]);
 
+// retrieve list of users
 const getUsers = () => {
   users.value = api.getUsers();
 };
 
+// call delete function
 const deleteUser = (email: string) => {
   api.deleteUser(email);
   getUsers();

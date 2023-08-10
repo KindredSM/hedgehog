@@ -59,11 +59,13 @@ const lastName = ref<string>("");
 const errorMessage = ref<string>("");
 
 const register = async () => {
+  // form validation
   if (!email.value || !password.value || !firstName.value || !lastName.value) {
     errorMessage.value = "All fields are required.";
     return;
   }
 
+  // register the user
   try {
     await auth.register({
       email: email.value,

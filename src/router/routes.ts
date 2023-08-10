@@ -27,6 +27,7 @@ const router = createRouter({
   routes,
 });
 
+// navigation guard checking for authentication
 router.beforeEach((to, _, next) => {
   const auth = useAuthStore();
 

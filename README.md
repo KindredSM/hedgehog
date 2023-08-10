@@ -2,7 +2,7 @@
 
 ## Description
 
-This test app provides an interface for users to register, log in and view a dashboard of existing users.
+This test app provides an interface for users to register, log in and view a dashboard of existing users using reqres for test API responses and localStorage for persistence.
 
 ## Features
 

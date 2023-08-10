@@ -41,6 +41,7 @@ const email = ref<string>("");
 const password = ref<string>("");
 const errorMessage = ref<string>("");
 
+// call login function
 const login = () => {
   const success = auth.login(email.value, password.value);
 
@@ -48,6 +49,7 @@ const login = () => {
     errorMessage.value = "";
     router.push("/dashboard");
   } else {
+    // form validation
     errorMessage.value = "Invalid email or password.";
   }
 };

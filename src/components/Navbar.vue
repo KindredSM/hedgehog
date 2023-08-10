@@ -59,6 +59,7 @@ const auth = useAuthStore();
 const router = useRouter();
 const isAuthenticated = computed(() => auth.isAuthenticated);
 
+// call logout function
 const logout = () => {
   auth.logout();
   router.push("/login");
