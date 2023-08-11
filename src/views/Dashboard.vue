@@ -27,7 +27,7 @@ const getUsers = () => {
   users.value = api.getUsers();
 };
 
-// call delete function
+// call delete function and delete selected user
 const deleteUser = (email: string) => {
   api.deleteUser(email);
   getUsers();

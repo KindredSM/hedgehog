@@ -65,7 +65,7 @@ const register = async () => {
     return;
   }
 
-  // register the user
+  // call registration function and register the user
   try {
     await auth.register({
       email: email.value,

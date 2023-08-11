@@ -41,7 +41,7 @@ const email = ref<string>("");
 const password = ref<string>("");
 const errorMessage = ref<string>("");
 
-// call login function
+// call login function and log the user in
 const login = () => {
   const success = auth.login(email.value, password.value);
 
